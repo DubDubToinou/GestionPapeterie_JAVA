@@ -124,9 +124,9 @@ public Article() {
 
     @Override
     public String toString() {
-        return "Article [designation=" + designation + ", idArticle=" + idArticle + ", marque=" + marque
-                + ", prixUnitaire=" + prixUnitaire + ", qteStock=" + qteStock + ", reference=" + reference + "]";
+        return "Article [ID ARTICLE : " + idArticle + " | REFERENCE : " + reference + " | MARQUE : " + marque
+                + " | DESIGNATION : " + designation + " | Prix Unitaire : " + prixUnitaire + " | QTE STOCK : " + qteStock
+                + "]";
     }
-    
 
 }

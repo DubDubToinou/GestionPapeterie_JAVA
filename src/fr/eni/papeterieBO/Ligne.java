@@ -44,8 +44,20 @@ public class Ligne {
     
     @Override
     public String toString() {
-       
-        return super.toString();
+       StringBuffer affichageLigne = new StringBuffer();
+       affichageLigne.append(" [");
+       affichageLigne.append(" QTE : ");
+       affichageLigne.append(getQte() + ",");
+       affichageLigne.append(" PRIX : ");
+       affichageLigne.append(getPrix() + " ,");
+
+       if (article != null) {
+        affichageLigne.append("article=");
+        affichageLigne.append(getArticle().toString());
+    }
+    affichageLigne.append("]");
+    return affichageLigne.toString();
+
     }
    
 

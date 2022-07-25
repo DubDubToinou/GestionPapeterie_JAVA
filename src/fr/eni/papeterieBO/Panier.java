@@ -42,7 +42,22 @@ public class Panier {
     @Override
     public String toString() {
        
-        return super.toString();
+        StringBuffer affichageCatalogue = new StringBuffer();
+        affichageCatalogue.append("Panier : \n\n");
+        
+        for(Ligne ligne  : ListeLignesPanier){
+            if(ligne != null)
+            {
+                affichageCatalogue.append("Ligne : " + ListeLignesPanier.indexOf(ligne));
+                affichageCatalogue.append(ligne.toString() + "\n");
+            }else
+            break;
+        }
+        affichageCatalogue.append("\n\n Total du Panier : " + getMontant() + "\n\n");
+        
+
+        return affichageCatalogue.toString();
+        
     }
 
 }

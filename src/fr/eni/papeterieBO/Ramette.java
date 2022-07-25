@@ -55,7 +55,8 @@ public class Ramette extends Article {
         
     @Override
     public String toString() {
-        return super.toString();
+       String affichage = String.format("%s Ramette [GRAMMAGE : %s ]", super.toString(), getGrammage());
+       return affichage;
     }
     
 }

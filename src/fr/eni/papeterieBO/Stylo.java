@@ -52,7 +52,7 @@ public class Stylo extends Article {
     }
 
     public String toString() {
-		 String texte = String.format("%s Stylo [Couleur=%s]", super.toString(), getCouleur());
+		 String texte = String.format("%s Stylo [COULEUR : %s]", super.toString(), getCouleur());
 		 return texte;
 	}
 
