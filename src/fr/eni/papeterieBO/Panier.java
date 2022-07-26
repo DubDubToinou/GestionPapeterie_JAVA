@@ -14,16 +14,19 @@ public class Panier {
     };
 
     public float getMontant() {
-        return montant;
+        for (Ligne ligne : ListeLignesPanier) {
+            this.montant += ligne.getPrix()*ligne.getQte();            
+        }
+        return this.montant;
     }
 
     
     public final Ligne getLigne(int index) {
-        return ListeLignesPanier.get(index);
+        return this.ListeLignesPanier.get(index);
     }
     
     public List<Ligne> getListeLignesPanier() {
-        return ListeLignesPanier;
+        return this.ListeLignesPanier;
     }
 
     public void addLigne(Article article, int qte){

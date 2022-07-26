@@ -10,7 +10,7 @@ package fr.eni.papeterieBO;
  */
 public abstract class Article {
     
-    private int idArticle;
+    private Integer idArticle;
     private String reference;
     private String marque;
     private String designation;
@@ -35,7 +35,7 @@ public Article() {
  * @param qteStock
  */
 
-    public Article(int idArticle, String marque, String reference,  String designation, float prixUnitaire,
+    public Article(Integer idArticle, String marque, String reference,  String designation, float prixUnitaire,
             int qteStock) {
         this.idArticle = idArticle;
         this.reference = reference;
@@ -54,13 +54,9 @@ public Article() {
  * @param qteStock
  */
 
-    public Article(String marque, String reference, String designation, float prixUnitaire, int qteStock) {
-        this.reference = reference;
-        this.marque = marque;
-        this.designation = designation;
-        this.prixUnitaire = prixUnitaire;
-        this.qteStock = qteStock;
-    }
+   public Article(String marque, String reference, String designation, float prixUnitaire, int qteStock) {
+        this(null, marque, reference, designation, prixUnitaire, qteStock);
+}
 
 
 /**
@@ -70,7 +66,7 @@ public Article() {
  */
 
     public int getIdArticle() {
-        return idArticle;
+        return this.idArticle;
     }
 
 
@@ -80,7 +76,7 @@ public Article() {
 
 
     public String getReference() {
-        return reference;
+        return this.reference;
     }
 
 
@@ -90,7 +86,7 @@ public Article() {
 
 
     public String getMarque() {
-        return marque;
+        return this.marque;
     }
 
 
@@ -99,7 +95,7 @@ public Article() {
     }
 
     public String getDesignation() {
-        return designation;
+        return this.designation;
     }
 
     public void setDesignation(String designation) {
@@ -107,7 +103,7 @@ public Article() {
     }
 
     public float getPrixUnitaire() {
-        return prixUnitaire;
+        return this.prixUnitaire;
     }
 
     public void setPrixUnitaire(float prixUnitaire) {
@@ -115,7 +111,7 @@ public Article() {
     }
 
     public int getQteStock() {
-        return qteStock;
+        return this.qteStock;
     }
 
     public void setQteStock(int qteStock) {

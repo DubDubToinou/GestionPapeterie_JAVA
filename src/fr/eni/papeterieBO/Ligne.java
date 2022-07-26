@@ -22,24 +22,23 @@ public class Ligne {
     //Getter / Setter:
 
     public Article getArticle() {
-        return article;
+        return this.article;
     }
 
-    private void setArticle(Article article){
-        this.article = article;                         // Erreur car non utilisé pour le moment.
-    };
+    // private void setArticle(Article article){
+    //     this.article = article;                         // Erreur car non utilisé pour le moment.
+    // };
 
-    public int getQte() {
-        return qte;
-    }
+   public int getQte() {
+        return this.qte;
+    } 
 
     public void setQte(int qte) {
         this.qte = qte;
     }
 
     public float getPrix(){
-        return article.getPrixUnitaire();
-
+        return this.article.getPrixUnitaire();
     }
     
     @Override
@@ -57,8 +56,5 @@ public class Ligne {
     }
     affichageLigne.append("]");
     return affichageLigne.toString();
-
     }
-   
-
 }

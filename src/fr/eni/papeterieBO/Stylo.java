@@ -19,7 +19,7 @@ public class Stylo extends Article {
      * @param qteStock
      * @param couleur
      */
-    public Stylo(int idArticle, String marque, String reference, String designation, float prixUnitaire, int qteStock,
+    public Stylo(Integer idArticle, String marque, String reference, String designation, float prixUnitaire, int qteStock,
             String couleur) {
         super(idArticle, marque, reference, designation, prixUnitaire, qteStock);
         this.couleur = couleur;
@@ -37,14 +37,13 @@ public class Stylo extends Article {
      */
     public Stylo(String marque, String reference, String designation, float prixUnitaire, int qteStock,
             String couleur) {
-        super(marque, reference, designation, prixUnitaire, qteStock);
-        this.couleur = couleur;
+        this(null, marque, reference, designation, prixUnitaire, qteStock, couleur);
     }
 
     //getter et setter de Stylo.
 
     public String getCouleur() {
-        return couleur;
+        return this.couleur;
     }
 
     public void setCouleur(String couleur) {

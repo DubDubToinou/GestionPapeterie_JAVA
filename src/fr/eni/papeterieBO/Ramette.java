@@ -22,7 +22,7 @@ public class Ramette extends Article {
      * @param qteStock
      * @param grammage
      */
-    public Ramette(int idArticle, String marque, String reference, String designation, float prixUnitaire, int qteStock,
+    public Ramette(Integer idArticle, String marque, String reference, String designation, float prixUnitaire, int qteStock,
             int grammage) {
         super(idArticle, marque, reference, designation, prixUnitaire, qteStock);
         this.grammage = grammage;
@@ -40,13 +40,12 @@ public class Ramette extends Article {
      */
     public Ramette(String marque, String reference, String designation, float prixUnitaire, int qteStock,
             int grammage) {
-        super(marque, reference, designation, prixUnitaire, qteStock);
-        this.grammage = grammage;
+        this(null, marque, reference, designation, prixUnitaire, qteStock, grammage);
     }
    
     //getter et setter
     public int getGrammage() {
-        return grammage;
+        return this.grammage;
     }
 
     public void setGrammage(int grammage) {
