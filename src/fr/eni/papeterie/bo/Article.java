@@ -1,4 +1,4 @@
-package fr.eni.papeterieBO;
+package fr.eni.papeterie.bo;
 /**
  * @author Antoine DUBUC
  * @version 1.0 Papeterie en JAVA.
