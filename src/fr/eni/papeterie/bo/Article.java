@@ -65,7 +65,7 @@ public Article() {
  * 
  */
 
-    public int getIdArticle() {
+    public Integer getIdArticle() {
         return this.idArticle;
     }
 
